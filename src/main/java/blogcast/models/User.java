@@ -34,3 +34,5 @@ public class User {
     }
 
 }
+//blog specific
+//dependency injection?
