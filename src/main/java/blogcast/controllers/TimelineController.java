@@ -1,11 +1,11 @@
-package blogcast.models;
+package blogcast.controllers;
+
+import blogcast.models.BlogEntry;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 
-public class Timeline {
-
+public class TimelineController {
     List<BlogEntry> AllBlogs = new ArrayList<>();
 
     public BlogEntry getBlog(){
@@ -21,11 +21,5 @@ public class Timeline {
         return false;
     }
 
-    public List<BlogEntry> getAllBlogs() {
-        return AllBlogs;
-    }
 
-    public void setAllBlogs(List<BlogEntry> allBlogs) {
-        AllBlogs = allBlogs;
-    }
 }

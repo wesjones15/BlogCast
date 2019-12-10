@@ -10,27 +10,54 @@ public class User {
     List<User> following = new ArrayList<>();
     List<Blog> userBlogs = new ArrayList<>();
 
-    public String comment(String comment){
+    public String comment(){
         return null;
     }
 
-    public String post(Blog blog, BlogEntry blogEntry ){
+    public String post(){
 
-        if(blog.isAuthorized(this)){
-            //add post
-            //else throw exception
-        }
         return null;
     }
 
-    public Boolean follow(User user){
+    public Boolean follow(){
 
         return false;
     }
 
-    public Boolean unFollow(User user){
+    public Boolean unFollow(){
 
         return false;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public List<User> getFollowers() {
+        return followers;
+    }
+
+    public void setFollowers(List<User> followers) {
+        this.followers = followers;
+    }
+
+    public List<User> getFollowing() {
+        return following;
+    }
+
+    public void setFollowing(List<User> following) {
+        this.following = following;
+    }
+
+    public List<Blog> getUserBlogs() {
+        return userBlogs;
+    }
+
+    public void setUserBlogs(List<Blog> userBlogs) {
+        this.userBlogs = userBlogs;
+    }
 }

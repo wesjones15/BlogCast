@@ -5,17 +5,13 @@ import java.util.List;
 
 public class Blog {
 
-    private List<User> authorizedUsers = new ArrayList<>();
+    List<BlogEntry> blogs = new ArrayList<>();
 
-    //private List<Comment> blogComments = new ArrayList<>();
-
-    public Boolean isAuthorized(User user){
-        return authorizedUsers.contains(user);
+    public List<BlogEntry> getBlogs() {
+        return blogs;
     }
 
-    public void addAuthorizedUser(User user){
-
+    public void setBlogs(List<BlogEntry> blogs) {
+        this.blogs = blogs;
     }
-
-
 }
