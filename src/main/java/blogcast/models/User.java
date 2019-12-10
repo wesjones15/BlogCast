@@ -61,3 +61,5 @@ public class User {
         this.userBlogs = userBlogs;
     }
 }
+//blog specific
+//dependency injection?
