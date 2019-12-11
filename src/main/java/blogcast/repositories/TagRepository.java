@@ -1,4 +1,4 @@
 package blogcast.repositories;
 
-public interface UserRepository {
+public interface TagRepository {
 }

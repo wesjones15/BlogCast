@@ -1,6 +1,9 @@
 package blogcast.models;
 
+import sun.security.krb5.internal.ccache.Tag;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class BlogEntry {
@@ -12,6 +15,10 @@ public class BlogEntry {
     List<Comment> comments = new ArrayList<>();
 
     private User author;
+
+    List<Tag> tags = new ArrayList<>();
+
+
 
     public String getTitle() {
         return title;

@@ -1,4 +1,4 @@
 package blogcast.repositories;
 
-public class BlogRepository {
+public interface BlogRepository {
 }

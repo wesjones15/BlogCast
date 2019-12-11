@@ -28,6 +28,7 @@ public class User {
 
         return false;
     }
+    List<Dm> dms = new ArrayList<>();
 
     public String getUserName() {
         return userName;
