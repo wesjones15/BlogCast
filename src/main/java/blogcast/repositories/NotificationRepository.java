@@ -1,9 +1,9 @@
 package blogcast.repositories;
 
-import blogcast.models.Comment;
+import blogcast.models.Notification;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CommentRepository extends CrudRepository<Comment, Long> {
+public interface NotificationRepository extends CrudRepository<Notification, Long> {
 }
