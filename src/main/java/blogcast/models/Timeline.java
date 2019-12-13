@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Stack;
 
 public class Timeline {
+    private Long id;
 
-    List<BlogEntry> AllBlogs = new ArrayList<>();
+   private List<BlogEntry> AllBlogs = new ArrayList<>();
 
     public BlogEntry getBlog(){
         return null;

@@ -1,4 +1,6 @@
 package blogcast.repositories;
 
-public interface TimelineRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface TimelineRepository extends CrudRepository {
 }
