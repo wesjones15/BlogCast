@@ -1,7 +1,12 @@
 package blogcast.repositories;
 
-import java.util.HashMap;
+import blogcast.models.Reaction;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface ReactionRepository {// extends CrudRepository<Map<Reaction, Integer>> {
-    //Map<Reaction, Integer>reactions = new HashMap<>();
+import java.util.HashMap;
+import java.util.Map;
+
+@Repository
+public interface ReactionRepository extends CrudRepository<Map<Reaction, Integer>, Long> {
 }
