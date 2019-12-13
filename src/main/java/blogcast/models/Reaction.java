@@ -18,4 +18,27 @@ public class Reaction {
     @Column(name = "REACTION_COUNT")
     private Integer count;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getEmoji() {
+        return emoji;
+    }
+
+    public void setEmoji(String emoji) {
+        this.emoji = emoji;
+    }
+
+    public Integer getCount() {
+        return count;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
+    }
 }
