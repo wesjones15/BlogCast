@@ -1,8 +1,6 @@
 package blogcast.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,12 +11,23 @@ public class Blog {
     @GeneratedValue
     private Long id;
     private String blogName;
-    private List<User> authorizedUsers = new ArrayList<>();
-    private List<BlogEntry> allPosts = new ArrayList<>();
-    private List<User> followers = new ArrayList<>();
-    private List<Comment> blogComments = new ArrayList<>();
+    @OneToMany
+    @JoinColumn
+    private List<User> authorizedUsers;
+    @OneToMany
+    @JoinColumn
+    private List<BlogEntry> allPosts;
+    @OneToMany
+    @JoinColumn
+    private List<User> followers;
+    @OneToMany
+    @JoinColumn
+    private List<Comment> blogComments;
 
     //CONSTRUCTORS
+    public Blog() {
+    }
+
     public Blog(String blogName, User creator) {
         this.blogName = blogName;
         this.authorizedUsers.add(creator);

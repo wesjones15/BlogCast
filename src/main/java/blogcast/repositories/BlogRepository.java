@@ -1,4 +1,7 @@
 package blogcast.repositories;
 
-public interface BlogRepository {
+import blogcast.models.Blog;
+import org.springframework.data.repository.CrudRepository;
+
+public interface BlogRepository extends CrudRepository<Blog,Long> {
 }
