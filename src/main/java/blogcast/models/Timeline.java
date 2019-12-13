@@ -5,6 +5,7 @@ package blogcast.models;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,12 +14,25 @@ public class Timeline {
 
     @Id
     @GeneratedValue
-    private Long id;
-    private ArrayList<BlogEntry> AllBlogs;// = new ArrayList();
 
-    public Timeline() {}
+    private Long id;
+    @OneToMany
+    private List<BlogEntry> AllBlogs = new ArrayList<>();
+
+    public Timeline() {
+    }
+
     public Timeline(List<BlogEntry> allBlogs) {
-        AllBlogs = allBlogs;
+        AllBlogs = (ArrayList<BlogEntry>) allBlogs;
+    }
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public List<BlogEntry> getAllBlogs() {
@@ -26,6 +40,6 @@ public class Timeline {
     }
 
     public void setAllBlogs(List<BlogEntry> allBlogs) {
-        AllBlogs = allBlogs;
+        AllBlogs = (ArrayList<BlogEntry>) allBlogs;
     }
 }

@@ -1,22 +1,35 @@
 package blogcast.models;
 
-import sun.security.krb5.internal.ccache.Tag;
-
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+@Entity
 public class BlogEntry {
 
+
+    @Id
+    @GeneratedValue
+    private Long id;
     private String title;
-
     private Object body;
-
-    List<Comment> comments = new ArrayList<>();
+    @OneToMany
+    private List<Comment> comments;
 
     private User author;
+    @OneToMany
+    private List<Tag> tags;
+    public BlogEntry(){}
+    public BlogEntry(Object body ) {
+    }
 
-    List<Tag> tags = new ArrayList<>();
+    public BlogEntry( String blogEntryName, Object body) {
+
+    }
 
 
 
