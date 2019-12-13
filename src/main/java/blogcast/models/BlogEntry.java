@@ -22,6 +22,13 @@ public class BlogEntry {
 
     private List<Tag> tags = new ArrayList<>();
 
+    public BlogEntry(Object body ) {
+    }
+
+    public BlogEntry( String blogEntryName, Object body) {
+
+    }
+
 
 
     public String getTitle() {
