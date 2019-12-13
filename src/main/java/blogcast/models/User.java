@@ -48,7 +48,7 @@ public class User {
     public Boolean follow(User user) throws Exception {
 
         if (followers.contains(user)) {
-            throw new Exception("You already follow this user!wq");
+            throw new Exception("You already follow this user ! wq ");
         }
         else {
             followers.add(user);
