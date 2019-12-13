@@ -3,6 +3,7 @@ package blogcast.models;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -10,16 +11,19 @@ import java.util.List;
 @Entity
 public class BlogEntry {
 
+
     @Id
     @GeneratedValue
     private Long id;
     private String title;
     private Object body;
-    private List<Comment> comments = new ArrayList<>();
+    @OneToMany
+    private List<Comment> comments;
+
     private User author;
-
-    private List<Tag> tags = new ArrayList<>();
-
+    @OneToMany
+    private List<Tag> tags;
+    public BlogEntry(){}
     public BlogEntry(Object body ) {
     }
 
