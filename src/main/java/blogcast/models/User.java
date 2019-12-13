@@ -3,10 +3,7 @@ package blogcast.models;
 import blogcast.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,15 +15,19 @@ public class User {
     @Column(name = "User_ID")
     private Long id;
 
+    @OneToMany
     @Column(name = "Followers")
     private List<User> followers = new ArrayList();
 
+    @OneToMany
     @Column(name = "Following")
     private List<User> following = new ArrayList();
 
+    @OneToMany
     @Column(name = "Blog_Entries")
     private List<BlogEntry> userBlogEntries = new ArrayList();
 
+    @OneToMany
     @Column(name = "Direct_Messages")
     private List<DirectMessage> directMessages = new ArrayList();
 
