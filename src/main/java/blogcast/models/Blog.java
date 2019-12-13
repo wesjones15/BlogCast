@@ -4,19 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Blog {
+    //FIELDS
+    private Long id;
+    private String blogName;
+    private List<User> authorizedUsers;
+    private List<BlogEntry> blogs = new ArrayList<>();
+    private List<User> followers = new ArrayList<>();
 
-    List<BlogEntry> blogs = new ArrayList<>();
-//    private List<Comment> blogComments = new ArrayList<>();
-    public List<BlogEntry> getBlogs() {
-        return blogs;
-    }
+    //CONSTRUCTORS
 
-//    public Boolean isAuthorized(User user){
-//        return authorizedUsers.contains(user);
-//    }
 
-    public void setBlogs(List<BlogEntry> blogs) {
-        this.blogs = blogs;
-    }
+    //GETTERS AND SETTERS
+
+
+    //OTHER METHODS
+
 }
-//all comments key, vlaues are a list of key
+
+//    FUTURE STUFF TO ADD:
+//    private List<Comment> blogComments = new ArrayList<>();
