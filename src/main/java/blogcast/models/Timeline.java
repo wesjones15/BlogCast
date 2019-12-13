@@ -26,11 +26,6 @@ public class Timeline {
 
     }
 
-    public Boolean removeBlog(){
-
-        return false;
-    }
-
     public List<BlogEntry> getAllBlogs() {
         return AllBlogs;
     }
