@@ -6,17 +6,14 @@ import java.util.List;
 public class Blog {
 
     List<BlogEntry> blogs = new ArrayList<>();
-
-<<<<<<< HEAD
+//    private List<Comment> blogComments = new ArrayList<>();
     public List<BlogEntry> getBlogs() {
         return blogs;
-=======
-    private List<Comment> blogComments = new ArrayList<>();
-
-    public Boolean isAuthorized(User user){
-        return authorizedUsers.contains(user);
->>>>>>> origin
     }
+
+//    public Boolean isAuthorized(User user){
+//        return authorizedUsers.contains(user);
+//    }
 
     public void setBlogs(List<BlogEntry> blogs) {
         this.blogs = blogs;

@@ -1,13 +1,26 @@
 package blogcast.models;
 
-import sun.security.krb5.internal.ccache.Tag;
 
+import blogcast.repositories.ReactionRepository;
+import blogcast.repositories.TagRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.persistence.Entity;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Comment {
 
     private String comment;
+    private ReactionRepository reactionRepository;
+    private TagRepository tagRepository;
+
+    @Autowired
+    public Comment(ReactionRepository rr, TagRepository tr) {
+        this.reactionRepository = rr;
+        this.tagRepository = tr;
+    }
 
     public String getComment() {
         return comment;
@@ -16,5 +29,4 @@ public class Comment {
     public void setComment(String comment) {
         this.comment = comment;
     }
-    List<Tag> tags = new ArrayList<>();
 }

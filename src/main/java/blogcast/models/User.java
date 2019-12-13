@@ -9,6 +9,7 @@ public class User {
     List<User> followers = new ArrayList<>();
     List<User> following = new ArrayList<>();
     List<Blog> userBlogs = new ArrayList<>();
+    List<DirectMessage> dms = new ArrayList<>();
 
     public String comment(){
         return null;
@@ -28,7 +29,7 @@ public class User {
 
         return false;
     }
-    List<Dm> dms = new ArrayList<>();
+
 
     public String getUserName() {
         return userName;
