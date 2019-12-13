@@ -5,21 +5,38 @@ import blogcast.repositories.ReactionRepository;
 import blogcast.repositories.TagRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 public class Comment {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "COMMENT_ID")
+    private Long id;
+
+    @Column(name = "COMMENT_VALUE")
     private String comment;
-    private ReactionRepository reactionRepository;
-    private TagRepository tagRepository;
 
     @Autowired
-    public Comment(ReactionRepository rr, TagRepository tr) {
-        this.reactionRepository = rr;
-        this.tagRepository = tr;
+    private ReactionRepository reactionRepository;
+    @Autowired
+    private TagRepository tagRepository;
+
+//    @Autowired
+//    public Comment(ReactionRepository rr, TagRepository tr) {
+//        this.reactionRepository = rr;
+//        this.tagRepository = tr;
+//    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getComment() {

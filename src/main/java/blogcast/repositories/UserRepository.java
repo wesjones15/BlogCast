@@ -1,4 +1,6 @@
 package blogcast.repositories;
 
-public interface UserRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface UserRepository extends CrudRepository {
 }
