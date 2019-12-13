@@ -7,15 +7,25 @@ import javax.persistence.Id;
 
 @Entity
 public class DirectMessage {
+
     @Id
     @GeneratedValue
     @Column(name = "DIRECTMESSAGE_ID")
     private Long id;
 
+    @Column(name = "FROM_USER_ID")
     private Long fromUserId;
+
+    @Column(name = "TO_USER_ID")
     private Long toUserId;
+
+    @Column(name = "TITLE")
     private String title;
+
+    @Column(name = "MESSAGE")
     private String message;
+
+    @Column(name = "TIME_STAMP")
     private Long timestamp;
 
     public Long getId() {
