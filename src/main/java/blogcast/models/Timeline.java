@@ -1,24 +1,24 @@
 package blogcast.models;
 
+
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 
+@Entity
 public class Timeline {
 
-    List<BlogEntry> AllBlogs = new ArrayList<>();
+    @Id
+    @GeneratedValue
+    private Long id;
+    private ArrayList<BlogEntry> AllBlogs;// = new ArrayList();
 
-    public BlogEntry getBlog(){
-        return null;
-    }
-
-    public void addBlog(){
-
-    }
-
-    public Boolean removeBlog(){
-
-        return false;
+    public Timeline() {}
+    public Timeline(List<BlogEntry> allBlogs) {
+        AllBlogs = allBlogs;
     }
 
     public List<BlogEntry> getAllBlogs() {
